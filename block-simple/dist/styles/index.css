@@ -1,0 +1,10 @@
+/* src/styles/index.scss */
+.wp-block-gutenberg-blocks-sample-block-simple {
+  color: white;
+  background: red;
+  padding: 20px;
+}
+.wp-block-gutenberg-blocks-sample-block-simple h1 {
+  font-size: 20px;
+  font-weight: 600;
+}

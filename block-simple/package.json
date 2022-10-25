@@ -2,18 +2,18 @@
     "name": "block-simple",
     "version": "1.0.0",
     "license": "GPL-2.0-or-later",
+    "type": "module",
     "main": "block.js",
     "devDependencies": {
-        "babel-core": "^6.25.0",
-        "babel-loader": "^7.1.1",
-        "babel-plugin-transform-react-jsx": "^6.24.1",
-        "babel-preset-env": "^1.6.0",
-        "cross-env": "^5.0.1",
-        "webpack": "^3.1.0"
+        "autoprefixer": "^10.4.12",
+        "esbuild": "^0.15.12",
+        "esbuild-plugin-external-global": "^1.0.1",
+        "esbuild-plugin-inline-image": "^0.0.8",
+        "esbuild-sass-plugin": "^2.3.3",
+        "postcss": "^8.4.18"
     },
     "scripts": {
-        "build": "node build.js",
-        "dev": "cross-env BABEL_ENV=default webpack --watch"
+        "watch": "node esbuild.config.mjs"
     },
     "dependencies": {
         "esbuild": "^0.15.11"

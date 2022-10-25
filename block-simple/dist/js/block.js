@@ -1,5 +1,5 @@
 (() => {
-  // block.js
+  // src/js/block.js
   var { registerBlockType } = wp.blocks;
   var { __ } = wp.i18n;
   registerBlockType(
