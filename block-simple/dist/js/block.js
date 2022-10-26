@@ -1,11 +1,10 @@
 (() => {
   // src/js/block.js
   var { registerBlockType } = wp.blocks;
-  var { __ } = wp.i18n;
   registerBlockType(
     "gutenberg-blocks-sample/block-simple",
     {
-      title: __("GB Sample - Simple Red Title"),
+      title: "Simple Red Title",
       icon: "universal-access-alt",
       category: "common",
       edit({ className }) {

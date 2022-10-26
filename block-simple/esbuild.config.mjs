@@ -23,14 +23,17 @@ build({
         ".js": "jsx",
     },
     sourcemap: false,
-    plugins: [imageInline(), sassPlugin({
-        async transform(source) {
-            const { css } = await postcss([autoprefixer]).process(source, { from: undefined });
-            return css;
-        },
-    }), externalGlobalPlugin({
-        'react': 'window.React',
-        'react-dom': 'window.ReactDOM',
-    })],
+    plugins: [
+        imageInline(),
+        sassPlugin({
+            async transform(source) {
+                const { css } = await postcss([autoprefixer]).process(source, { from: undefined });
+                return css;
+            },
+        }),
+        externalGlobalPlugin({
+            'react': 'window.React',
+            'react-dom': 'window.ReactDOM',
+        })],
 }).then(() => console.log("⚡ Build complete! ⚡"))
     .catch(() => process.exit(1));
