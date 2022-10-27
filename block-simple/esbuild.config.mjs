@@ -35,5 +35,5 @@ build({
             'react': 'window.React',
             'react-dom': 'window.ReactDOM',
         })],
-}).then(() => console.log("⚡ Build complete! ⚡"))
+}).then(() => console.log("⚡ Build complete and watching... ⚡"))
     .catch(() => process.exit(1));

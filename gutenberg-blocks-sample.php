@@ -98,7 +98,7 @@ class Gutenberg_Blocks_Sample {
         $editor_style_slug = $this->plugin_name . '-' . $block_name . '-editor-style';
 
         // The JS block script
-        $script_file = $block_name . '/dist/block.js';
+        $script_file = $block_name . '/dist/js/block.js';
         wp_enqueue_script( 
             $script_slug, 
             plugin_dir_url(__FILE__) . $script_file, 
@@ -114,7 +114,7 @@ class Gutenberg_Blocks_Sample {
         // It will be loaded on the editor and on the site
         wp_register_style(
             $style_slug,
-            plugin_dir_url( __FILE__ )  . $block_name . '/css/index.css', 
+            plugin_dir_url( __FILE__ )  . $block_name . '/dist/styles/index.css', 
             ['wp-blocks'], // General style
             GBC_VERSION
         );            
@@ -122,7 +122,7 @@ class Gutenberg_Blocks_Sample {
         // The block style for the editor only
         wp_register_style(
             $editor_style_slug,
-            plugin_dir_url( __FILE__ ) . $block_name . '/css/index.css', 
+            plugin_dir_url( __FILE__ ) . $block_name . '/dist/styles/index.css', 
             ['wp-edit-blocks'], // Style for the editor
             GBC_VERSION
         );
